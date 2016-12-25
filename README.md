@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # jekyll-uno
 
 Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
@@ -43,3 +44,8 @@ Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno
 ### Copyright and license
 
 It is under [the MIT license](/LICENSE).
+=======
+# prakruticgogia.github.io
+
+My personal website created using [Jekyll]. Theme used is [jekyll-uno](https://github.com/joshgerdes/jekyll-uno).
+>>>>>>> d8fccae3167847053197aa99e1f7d6200d5301ab
