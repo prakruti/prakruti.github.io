@@ -1,8 +1,8 @@
 # Site settings
 title: Prakruti Catherine Gogia
 description: 'Computer Vision and Machine Learning Enthusiast'
-url: 'https://prakruti.github.io/'
-baseurl: '/prakruti'
+url: 'https://prakruti.github.io'
+baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
