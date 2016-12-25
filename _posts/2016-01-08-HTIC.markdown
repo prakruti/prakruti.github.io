@@ -1,0 +1,12 @@
+---
+title:  "Semi-interactive segmentation of tumors from CT Scans"
+categories: [project]
+tags: [graph]
+---
+
+In this project, the goal was to segment out a tumor from a CT Scan. The algorithm allowed for some interaction between from a doctor. I used the Random-Walker algorithm which accepts a few labeled foreground and background pixels as input. 
+
+The image is then modeled as a circuit. 
+
+Matrix inversions.
+
