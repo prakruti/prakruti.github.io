@@ -1,0 +1,33 @@
+---
+title:  "Augmented Reality for Surgical Planning"
+categories: [project]
+tags: [AR,VR]
+---
+
+## Abstract
+
+Surgeons perform complex procedures where precision is paramount. More- over, the anatomy of each of the patients is different. Thus, surgical planning and in-situ navigation assistance assume importance in this field.
+Current surgical navigation systems track instruments and use a 2D screen to make a surgeon aware of position and orientation. This suffers from the drawback of loss of attention of the surgeon as she switches between the screen and the patient, and also of viewing only 2D projections of a 3D object. In addition, some frame-based systems cause considerable discomfort to the patient.
+
+An Augmented Reality - based application is proposed to overcome drawbacks at the surgical planning stage as well as to serve as a navigating aid during surgery. I built the pipeline to be able to augment content on any 3D object that can fit on a desktop, view the augmented content on the Oculus Rift and manipulate it using a UI. 
+
+## The Oculus Rift as an AR device
+
+The Oculus Rift was first converted into an AR device using video see-through. Two Logitech cameras are mounted on a camera mount made of an acrylic sheet. The distance between the two camera centers is adjustable and can be changed to suit a user’s IPD (inter-pupillary distance). 
+
+![Mount](/images/CameraMount.png)
+
+## Augmentation
+
+Augmentation is performed using the Vuforia SDK for Unity. The object to be augmented upon, a mannequin head, in this case is scanned for interest points. The left eye camera feed is used to augment a 3D model of the brain on the mannequin head. A drawback of this method is the use of markers for augmentation. 
+
+![Augmentation](/images/Augmentation.png)
+![Augmentation showing the tumor](/images/Tumor.png)
+
+
+## User Interface
+
+I used the Leap Motion Controller for input. The UI can be used to render selective parts of the model and display patient information. 
+![UI](/images/UI.png)
+
+
