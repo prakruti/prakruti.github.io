@@ -1,5 +1,5 @@
 ---
-title:  "Music and Merriment"
+title:  "Music and Me!"
 categories: [misc]
 tags: [interests, music]
 ---
