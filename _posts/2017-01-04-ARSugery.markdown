@@ -4,8 +4,6 @@ categories: [project]
 tags: [AR,VR]
 ---
 
-## Abstract
-
 Surgeons perform complex procedures where precision is paramount. More- over, the anatomy of each of the patients is different. Thus, surgical planning and in-situ navigation assistance assume importance in this field.
 Current surgical navigation systems track instruments and use a 2D screen to make a surgeon aware of position and orientation. This suffers from the drawback of loss of attention of the surgeon as she switches between the screen and the patient, and also of viewing only 2D projections of a 3D object. In addition, some frame-based systems cause considerable discomfort to the patient.
 
