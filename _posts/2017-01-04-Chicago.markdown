@@ -1,0 +1,6 @@
+---
+title:  "Chicago"
+categories: [misc]
+tags: [interests, travel, music]
+---
+
