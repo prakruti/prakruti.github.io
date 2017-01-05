@@ -1,12 +1,33 @@
 ---
 title:  "Semi-interactive segmentation of tumors from CT Scans"
 categories: [project]
-tags: [graph]
+tags: [graphs, segmentation]
 ---
 
-In this project, the goal was to segment out a tumor from a CT Scan. The algorithm allowed for some interaction between from a doctor. I used the Random-Walker algorithm which accepts a few labeled foreground and background pixels as input. 
+Segmenting images is a common pre-processing step in image analysis. The current project involved **segmenting tumors from CT scans** to reduce manual effort and increase accuracy. Over several scans, this helps monitor patient progress and helps at the planning stage for image-guided surgery.
 
-The image is then modeled as a circuit. 
+The Random-Walker is a semi-interactive segmentation algorithm. On being provided with a few foreground (red) and background (blue) seed pixels, it labels the rest of the pixels in the image. I chose this algorithm as on one hand, it reduces manual effort yet retains input from an expert. The result can be iteratively improved through repeated interaction with the expert.
 
-Matrix inversions.
+An example of this is shown below, white - foreground and black - background
 
+![First Iteration](/images/Iter1.png)
+
+The region inside the handles is wrongly labelled as the foreground, so in the interactive phase, seeds are provided for the ambiguous regions. 
+
+![Adjusting seeds](/images/Adjust1.png)
+
+The improved segmentation is shown below
+
+![Second Iteration](/images/Iter2.png)
+
+I created a GUI in MATLAB that can load the scan and accept seed pixels from the user. Some algorithm parameters such as beta coefficient and the choice of solver are also made available to the user.
+
+
+
+## Algorithm Details
+
+The RW algorithm models the image as a circuit/ graph. Each pixel is a circuit node and and the connections between neighbouring pixels are modeled as resistances. The value of the resistance is dictated by the intensity differences between the pixels, larger the difference - larger is the resistance thus disallowing the flow of current in that branch. 
+
+Each seed acts as a voltage source. On solving the circuit equations for image, all the unlabelled nodes are assigned a voltage. We can then threshold this voltage to obtain the label of the said pixel.
+
+Solving the circuit equations involves inverting large matrices. For 3D images, this condition number of the matrix is very large. Thus, choosing the appropriate solver for the matrix size becomes important. Using a conjugate gradient solver proved better than the standard solver when segmentations were evaluated using the dice coefficient. 
